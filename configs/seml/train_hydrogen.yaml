@@ -1,0 +1,61 @@
+seml:
+  executable: train_many.py
+  name: hydrogen_globe
+  output_dir: ~/slurm-output
+  project_root_dir: ../../
+
+slurm:
+  sbatch_options:
+    gres: gpu:1
+
+
+fixed:
+  print_progress: False
+  batch_size: 64
+  training_epochs: 16385
+  chkpts: [64, 256, 1024, 4096, 16384]
+
+
+grid:
+  globe.wf_model:
+    type: choice
+    options:
+      - moon
+      - ferminet
+  systems:
+    type: choice
+    options:
+      - - [deeperwin_mol, H6, pretrain]
+      - - ['chain', 'H', 10, 1.0]
+        - ['chain', 'H', 10, 1.2]
+        - ['chain', 'H', 10, 1.4]
+        - ['chain', 'H', 10, 1.6]
+        - ['chain', 'H', 10, 1.8]
+        - ['chain', 'H', 10, 2.0]
+        - ['chain', 'H', 10, 2.4]
+        - ['chain', 'H', 10, 2.8]
+        - ['chain', 'H', 10, 3.2]
+        - ['chain', 'H', 10, 3.6]
+      - - ['rectangle', 'H', 85, 3.2843]
+        - ['rectangle', 'H', 86, 3.2843]
+        - ['rectangle', 'H', 87, 3.2843]
+        - ['rectangle', 'H', 88, 3.2843]
+        - ['rectangle', 'H', 89, 3.2843]
+        - ['rectangle', 'H', 89.999, 3.2843]
+      - - [deeperwin_mol, H6, pretrain]
+        - ['chain', 'H', 10, 1.0]
+        - ['chain', 'H', 10, 1.2]
+        - ['chain', 'H', 10, 1.4]
+        - ['chain', 'H', 10, 1.6]
+        - ['chain', 'H', 10, 1.8]
+        - ['chain', 'H', 10, 2.0]
+        - ['chain', 'H', 10, 2.4]
+        - ['chain', 'H', 10, 2.8]
+        - ['chain', 'H', 10, 3.2]
+        - ['chain', 'H', 10, 3.6]
+        - ['rectangle', 'H', 85, 3.2843]
+        - ['rectangle', 'H', 86, 3.2843]
+        - ['rectangle', 'H', 87, 3.2843]
+        - ['rectangle', 'H', 88, 3.2843]
+        - ['rectangle', 'H', 89, 3.2843]
+        - ['rectangle', 'H', 89.999, 3.2843]

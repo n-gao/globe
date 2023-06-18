@@ -1,0 +1,18 @@
+seml:
+  executable: train_many.py
+  name: benzene_globe
+  output_dir: ~/slurm-output
+  project_root_dir: ../../
+
+slurm:
+  sbatch_options:
+    gres: gpu:8
+
+fixed:
+  print_progress: False
+  batch_size: 1
+  training_epochs: 60000
+  mabenet.meta_model: none
+
+  systems:
+    - ['benzene']
