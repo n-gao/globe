@@ -1,6 +1,6 @@
-# Graph-learned orbital embeddings (Globe) & Molecular orbital network (Moon)
+# Generalizating Neural Wave Functions
 ![logo](logo.png)
-Reference implementation of Globe and Moon from<br>
+Reference implementation of Graph-learned orbital embeddings (Globe) and Molecular orbital network (Moon) from<br>
 [Generalizing Neural Wave Functions](https://arxiv.org/abs/2302.04168)<br>
 by Nicholas Gao and Stephane Günnemann<br>
 published at ICML 2023.
