@@ -1,9 +1,11 @@
 # Generalizating Neural Wave Functions
 ![logo](logo.png)
 Reference implementation of Graph-learned orbital embeddings (Globe) and Molecular orbital network (Moon) from<br>
-[Generalizing Neural Wave Functions](https://arxiv.org/abs/2302.04168)<br>
+<b>[Generalizing Neural Wave Functions](https://arxiv.org/abs/2302.04168)</b><br>
 by Nicholas Gao and Stephane Günnemann<br>
 published at ICML 2023.
+
+If you're looking for our implementation of PESNet, check out https://github.com/n-gao/pesnet.
 
 ## Installation
 1. Create a new conda environment:
